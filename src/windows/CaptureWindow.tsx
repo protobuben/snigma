@@ -3,6 +3,7 @@ import { listen, emit } from "@tauri-apps/api/event";
 import { invoke } from "@tauri-apps/api/core";
 import { getCurrentWebviewWindow } from "@tauri-apps/api/webviewWindow";
 import CaptureOverlay from "../components/CaptureOverlay";
+import { applyAccent } from "../theme";
 
 const CHAT_W = 408;
 const CHAT_H = 568;
@@ -70,11 +71,15 @@ export default function CaptureWindow() {
   const [exiting, setExiting] = useState(false);
 
   useEffect(() => {
-    const unlisten = listen("overlay:start", () => {
+    const p1 = listen("overlay:start", () => {
       setExiting(false);
       setActive(true);
     });
-    return () => { unlisten.then((fn) => fn()); };
+    const p2 = listen<{ hex: string }>("theme:accent", (e) => applyAccent(e.payload.hex));
+    return () => {
+      p1.then((fn) => fn());
+      p2.then((fn) => fn());
+    };
   }, []);
 
   useEffect(() => {

@@ -133,6 +133,8 @@ export default function MainWindow() {
     setAccent(hex);
     applyAccent(hex);
     localStorage.setItem("snigma_accent", hex);
+    emitTo("chat",    "theme:accent", { hex }).catch(() => {});
+    emitTo("capture", "theme:accent", { hex }).catch(() => {});
   }
 
   // ---------- Voice ----------

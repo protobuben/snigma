@@ -5,6 +5,7 @@ import { LogicalPosition } from "@tauri-apps/api/dpi";
 import ChatWidget from "../components/ChatWidget";
 import type { CapturedImages } from "./CaptureWindow";
 import type { Message, StoredSession } from "../types";
+import { applyAccent } from "../theme";
 
 interface ExitingChat {
   images:    CapturedImages;
@@ -102,10 +103,13 @@ export default function ChatWindow() {
 
     win.setPosition(new LogicalPosition(window.screen.width - 408 - margin, margin));
 
+    const p4 = listen<{ hex: string }>("theme:accent", (e) => applyAccent(e.payload.hex));
+
     return () => {
       p1.then((fn) => fn());
       p2.then((fn) => fn());
       p3.then((fn) => fn());
+      p4.then((fn) => fn());
     };
   }, []);
 
