@@ -58,7 +58,7 @@ Open the tray icon → the Snigma window appears → paste your key into the **L
 
 ### 3. Set your hotkey
 
-The default hotkey is **Alt + S**. You can change it in **Settings** to any combination that doesn't conflict with other apps.
+The default hotkey is **Ctrl + Shift + Space**. You can change it in **Settings** to any combination that doesn't conflict with other apps.
 
 ### 4. Capture something
 
