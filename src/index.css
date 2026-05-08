@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@import "katex/dist/katex.css";
+
+:root {
+  /* Default accent — overridden at runtime from localStorage("snigma_accent_rgb") */
+  --accent-rgb:       108, 99, 255;
+  --accent-light-rgb: 140, 128, 255;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: transparent;
+  font-family: "Inter", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar       { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #3a3a50; border-radius: 2px; }

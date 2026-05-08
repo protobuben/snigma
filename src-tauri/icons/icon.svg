@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#16162a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#8c80ff"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1024" height="1024" rx="224" fill="url(#bg)"/>
+
+  <!-- Subtle inner glow -->
+  <rect width="1024" height="1024" rx="224" fill="none"
+        stroke="rgba(140,128,255,0.18)" stroke-width="2"/>
+
+  <!-- Crop-frame corners (stroke only, rounded caps) -->
+  <g stroke="url(#accent)" stroke-width="52" stroke-linecap="round" fill="none">
+    <!-- Top-left -->
+    <polyline points="192,330 192,192 330,192"/>
+    <!-- Top-right -->
+    <polyline points="694,192 832,192 832,330"/>
+    <!-- Bottom-left -->
+    <polyline points="192,694 192,832 330,832"/>
+    <!-- Bottom-right -->
+    <polyline points="832,694 832,832 694,832"/>
+  </g>
+
+  <!-- Σ glyph -->
+  <text
+    x="512" y="620"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="380"
+    font-weight="700"
+    text-anchor="middle"
+    fill="url(#accent)"
+  >Σ</text>
+</svg>
