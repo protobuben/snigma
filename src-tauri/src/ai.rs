@@ -209,7 +209,7 @@ pub async fn send_to_ai(
     let body = json!({
         "system_instruction": { "parts": [{ "text": SYSTEM_PROMPT }] },
         "contents":           contents,
-        "generationConfig":   { "temperature": 0.4, "maxOutputTokens": 2048 }
+        "generationConfig":   { "temperature": 0.4, "maxOutputTokens": 8192 }
     });
 
     let resp = client
