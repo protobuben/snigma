@@ -50,7 +50,7 @@ Works great for:
 
 Snigma needs a license key to use the AI backend.
 
-Get one at **[snigma.github.io](https://snigma.github.io)** — a free tier is available, paid plans unlock higher monthly limits.
+Get one at **[snigma.github.io](https://snigma.github.io)**.
 
 ### 2. Enter your key
 
